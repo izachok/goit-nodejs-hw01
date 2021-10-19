@@ -32,9 +32,7 @@ async function removeContact(contactId) {
   }
 
   const contacts = await getContactsFromFile();
-  await saveContactsToFile(
-    contacts.filter((contact) => contact.id !== contactId)
-  );
+  await saveContactsToFile(contacts.filter((contact) => contact.id !== id));
   listContacts();
 }
 
